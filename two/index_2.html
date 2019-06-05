@@ -1,0 +1,104 @@
+<html>
+    <style>
+        .col{
+            background-color:rgb(210, 174, 243);
+            font-size: 20px;
+
+        }
+        .entry{
+            background-color: rgb(247, 247, 195);
+            font-size: 15px;
+            border-collapse: collapse;
+            width: 60%;
+            margin-left: 20%;
+        }
+
+        table,th,td{
+            border: 1px solid gray;
+            text-align: center;
+        }
+        #myInput{
+            width:55%;
+            margin-left: 20%;
+            border: 2px solid rgb(71, 25, 13);
+        }
+        #run{
+            border: 2px solid rgb(71, 25, 13);
+            background-color: rgb(226, 75, 37);
+        }
+    </style>
+    <body>
+        <centre>
+        <form >
+            <input type="text" id="myInput" placeholder="Enter name to filter" >
+            <input type="button" value="Go" onclick="dofilter()" id="run">
+        </form>
+        </centre>
+        <table class="entry" id="myTable">
+            <tr class="col">
+                <th width="25%">Roll No.</th>
+                <th width="50%">Name</th>
+                <th width="25%">Year</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>sakshi</td>
+                <td>1st</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>sandeep sharma</td>
+                <td>1st</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>pranati majhi</td>
+                <td>1st</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>tanvi nerkar</td>
+                <td>1st</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>pratigya tomar</td>
+                <td>2nd</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>muskan garg</td>
+                <td>1st</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>kaustav sen</td>
+                <td>1st</td>
+            </tr>
+        </table>
+        
+    </body>
+    <script>
+            function dofilter() {
+              // Declare variables 
+              var input, filter, table, tr, td, i, txtValue;
+              input = document.getElementById("myInput");
+              filter = input.value.toUpperCase();
+              table = document.getElementById("myTable");
+              tr = table.getElementsByTagName("tr");
+            
+              // Loop through all table rows, and hide those who don't match the search query
+              for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                  txtValue = td.textContent || td.innerText;
+                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                  } else {
+                    tr[i].style.display = "none";
+                  }
+                } 
+              }
+            }
+    </script>
+</html>

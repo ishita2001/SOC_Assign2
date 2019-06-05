@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .col{
+            background-color:rgb(210, 174, 243);
+            font-size: 20px;
+
+        }
+        .entry{
+            background-color: rgb(247, 247, 195);
+            font-size: 15px;
+            border-collapse: collapse;
+            width: 60%;
+            margin-left: 20%;
+        }
+
+        table,th,td{
+            border: 1px solid gray;
+            text-align: center;
+        }
+        #myInput{
+            width:55%;
+            margin-left: 20%;
+            border: 2px solid rgb(71, 25, 13);
+        }
+        #run{
+            border: 2px solid rgb(71, 25, 13);
+            background-color: rgb(226, 75, 37);
+        }
+    </style>
+    <body>
+        <form>
+            <input type="text" id="myInput" placeholder="Enter name to filter" >
+            <input type="button" value="Go" id="run">
+        </form><br>
+        <table class="entry" id="myTable">
+            <tr class="col">
+                <th width="25%">Roll No.</th>
+                <th width="50%">Name</th>
+                <th width="25%">Year</th>
+            </tr>
+            <tbody id="list">
+            <tr>
+                <td>1</td>
+                <td>sakshi</td>
+                <td>1st</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>sandeep sharma</td>
+                <td>1st</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>pranati majhi</td>
+                <td>1st</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>tanvi nerkar</td>
+                <td>1st</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>pratigya tomar</td>
+                <td>2nd</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>muskan garg</td>
+                <td>1st</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>kaustav sen</td>
+                <td>1st</td>
+            </tr>
+        </tbody>
+        </table>
+        
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+            $(document).ready(function(){
+              $("#run").on("click", function() {
+                var value = $("#myInput").val().toLowerCase();
+                $("#list tr").filter(function() {
+                  $(this).toggle($(this).find("td:eq(1)").text().toLowerCase().indexOf(value) > -1)
+                });
+              });
+            });
+    </script>
+    </html>
