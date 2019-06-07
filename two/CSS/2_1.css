@@ -1,0 +1,17 @@
+.col{
+    background-color:rgb(210, 174, 243);
+    font-size: 20px;
+
+}
+.entry{
+    background-color: rgb(247, 247, 195);
+    font-size: 15px;
+    border-collapse: collapse;
+    width: 60%;
+    margin-left: 20%;
+}
+
+table,th,td{
+    border: 1px solid gray;
+    text-align: center;
+}

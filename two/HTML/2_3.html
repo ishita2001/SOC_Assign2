@@ -1,33 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <style>
-        .col{
-            background-color:rgb(210, 174, 243);
-            font-size: 20px;
-
-        }
-        .entry{
-            background-color: rgb(247, 247, 195);
-            font-size: 15px;
-            border-collapse: collapse;
-            width: 60%;
-            margin-left: 20%;
-        }
-
-        table,th,td{
-            border: 1px solid gray;
-            text-align: center;
-        }
-        #myInput{
-            width:55%;
-            margin-left: 20%;
-            border: 2px solid rgb(71, 25, 13);
-        }
-        #run{
-            border: 2px solid rgb(71, 25, 13);
-            background-color: rgb(226, 75, 37);
-        }
-    </style>
+    <link rel="stylesheet" href="../CSS/2_3.css">
     <body>
         <form>
             <input type="text" id="myInput" placeholder="Enter name to filter" >
@@ -80,14 +53,5 @@
         
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script>
-            $(document).ready(function(){
-              $("#run").on("click", function() {
-                var value = $("#myInput").val().toLowerCase();
-                $("#list tr").filter(function() {
-                  $(this).toggle($(this).find("td:eq(1)").text().toLowerCase().indexOf(value) > -1)
-                });
-              });
-            });
-    </script>
+    <script src="../JavaScript/2_3.js"></script>
     </html>

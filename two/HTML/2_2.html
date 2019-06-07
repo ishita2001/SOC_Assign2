@@ -1,26 +1,15 @@
 <html>
-    <style>
-        .col{
-            background-color:rgb(210, 174, 243);
-            font-size: 20px;
-
-        }
-        .entry{
-            background-color: rgb(247, 247, 195);
-            font-size: 15px;
-            border-collapse: collapse;
-            width: 60%;
-            margin-left: 20%;
-        }
-
-        table,th,td{
-            border: 1px solid gray;
-            text-align: center;
-        }
-    </style>
-
+    
+    <link rel="stylesheet" href="../CSS/2_2.css">
+    <script src="../JavaScript/2_2.js"></script>
 
     <body>
+        <centre>
+        <form >
+            <input type="text" id="myInput" placeholder="Enter name to filter" >
+            <input type="button" value="Go" onclick="dofilter()" id="run">
+        </form>
+        </centre>
         <table class="entry" id="myTable">
             <tr class="col">
                 <th width="25%">Roll No.</th>
@@ -65,4 +54,5 @@
         </table>
         
     </body>
-    </html>
+
+</html>

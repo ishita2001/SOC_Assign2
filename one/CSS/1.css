@@ -1,0 +1,35 @@
+body {
+            background-image: url(back.png);
+        }
+        .image{
+            display:none;
+        }
+        img{
+            width: 60%;
+            height: 60%;
+            margin-left: 20%;
+            margin-right: 20%;
+            margin-top: 5%;
+
+            border-radius: 15px;
+            
+        }
+        .prev{
+            float:left;
+            margin-left: 20%;
+        }
+        .next{
+            float:right;
+            margin-right: 20%;
+        }
+        .next, .prev{
+            background-color:rgb(31, 64, 196);
+            color:white; 
+            font-size:x-large;
+            font-style: bold;
+            border:2px solid rgb(21, 36, 97);
+            border-radius: 4px;
+            opacity: 0.8;
+        }
+        .prev:hover {opacity: 1}
+        .next:hover {opacity: 1}
